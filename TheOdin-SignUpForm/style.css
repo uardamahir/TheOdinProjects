@@ -1,0 +1,9 @@
+@font-face {
+  font-family: Norse-Bold;
+  src: url("Norse-Bold.otf") format("opentype");
+}
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}

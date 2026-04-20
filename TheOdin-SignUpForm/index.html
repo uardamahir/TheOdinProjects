@@ -10,3 +10,80 @@
 <body>
   <div class="main">
     <div class="left">
+      <div class="logo-text">
+        <img src="images/odin.png" alt="Logo" class="overlay-img">
+        <p class="logo-caption">ODIN</p>
+      </div>
+      
+      <p class="photo">Photo by <span style="text-decoration: underline;">Halie West</span> On <span style="text-decoration: underline;">Unsplash</span></p>
+    </div>
+
+    <div class="right">
+      <div class="first">
+        <h2 class="uzun">This is not a real online service! You know you need something<br>
+            like this in your life to help you realize your deepest drams.<br>
+            Sign up <em>now</em> to get started. <br><br>
+            You <em>know</em> you want to.
+        </h2>
+      </div>
+
+      <div class="second">
+        <h2 class="kisa">Let's do this!</br></h2>
+
+<form id="signupForm" class="form-section">
+        <div class="form-group">
+      <label for="firstName">FIRST NAME</label>
+      <input type="text" id="firstName" name="first_name" required>
+        </div>
+        <div class="form-group">
+      <label for="lastName">LAST NAME</label>
+      <input type="text" id="lastName" name="last_name" required>
+        </div>
+        <div class="form-group">
+      <label for="email">EMAIL</label>
+      <input type="email" id="email" name="email" required>
+        </div>
+        <div class="form-group">
+      <label for="phone">PHONE NUMBER</label>
+      <input type="tel" id="phone" name="phone">
+        </div>
+        <div class="form-group">
+      <label for="password">PASSWORD</label>
+      <input type="password" id="password" name="password" required>
+        </div>
+        <div class="form-group">
+      <label for="confirmPassword">CONFIRM PASSWORD</label>
+      <input type="password" id="confirmPassword" name="confirm_password" required>
+    </div>
+  
+      </div>
+
+      <div class="third">
+
+        
+  
+        <button type="submit" class="create-account-btn">Create Account</button>
+
+         <p id="successMessage" style="color: green; font-size: 1.4rem; margin-top: 10px;"></p>
+
+         <h3 class="son">Already have an account?<a href="#" id="loginLink">Log in</a></h3>
+
+</form>
+      </div>
+    </div>
+  </div>
+
+  <div id="loginBox" class="login-popup">
+  <div class="login-content">
+    <span id="closeLogin" class="close">&times;</span>
+    <h2>Log In</h2>
+    <input type="email" id="loginEmail" placeholder="Email" required>
+    <input type="password" id="loginPassword" placeholder="Password" required>
+    <button id="loginSubmit">Log In</button>
+    <p id="loginMessage" class="login-message"></p>
+  </div>
+</div>
+
+  <script src="script.js"></script>
+</body>
+</html>

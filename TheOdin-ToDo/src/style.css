@@ -1,0 +1,185 @@
+body {
+  font-family: sans-serif;
+  padding: 20px;
+  background-color: #f7f7f7;
+  color: #333;
+  max-width: 900px;
+  margin: auto;
+}
+
+h1, h2 {
+  color: #222;
+}
+
+#project-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.project-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.project-btn {
+  background-color: #ffffff;
+  border: 1px solid #ccc;
+  padding: 6px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.project-btn:hover {
+  background-color: #eef;
+}
+
+.project-del-btn {
+  background: none;
+  border: none;
+  color: red;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.todo {
+  background-color: #fff;
+  border: 1px solid #ddd;
+    border-left: 5px solid transparent;
+  padding-left: 8px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  transition: box-shadow 0.3s;
+}
+.priority-high {
+  border-left: 5px solid red;
+  padding-left: 10px;
+}
+.priority-medium {
+  border-left: 5px solid orange;
+  padding-left: 10px;
+}
+.priority-low {
+  border-left: 5px solid green;
+  padding-left: 10px;
+}
+
+.todo:hover {
+  box-shadow: 0 0 5px #aaa;
+}
+
+.todo h4 {
+  margin: 0;
+}
+
+.todo-details {
+  margin-top: 8px;
+  font-size: 14px;
+}
+
+button.edit-btn,
+button.delete-btn {
+  margin-top: 5px;
+  margin-right: 5px;
+  background-color: #eee;
+  border: none;
+  padding: 4px 8px;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+button.edit-btn:hover {
+  background-color: #cdf;
+}
+
+button.delete-btn:hover {
+  background-color: #fdd;
+}
+
+input[type="checkbox"] {
+  margin-top: 10px;
+}
+
+/* Priority renkleri */
+.high {
+  border-left-color: #d9534f; /* kırmızı */
+}
+
+.medium {
+  border-left-color: #f0ad4e; /* turuncu */
+}
+
+.low {
+  border-left-color: #5cb85c; /* yeşil */
+}
+
+/* Formlar */
+form {
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+input, select, textarea {
+  padding: 6px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  width: 100%;
+}
+
+button[type="submit"] {
+  background-color: #337ab7;
+  color: white;
+  border: none;
+  padding: 8px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button[type="submit"]:hover {
+  background-color: #286090;
+}
+.completed {
+  text-decoration: line-through;
+  color: gray;
+}
+/* Tüm butonlar için genel stil */
+button,
+input[type="submit"],
+select {
+  padding: 8px 12px;
+  font-size: 14px;
+  height: 36px; /* Yükseklik sabit */
+  box-sizing: border-box;
+}
+
+/* Düzenle ve Sil butonları */
+button.edit-btn,
+button.delete-btn,
+button.project-del-btn {
+  padding: 6px 12px;
+  font-size: 14px;
+  height: 36px;
+}
+
+/* Priority (select) inputu */
+#todo-priority {
+  width: 100%;
+  height: 36px;
+  font-size: 14px;
+  padding: 0 8px;
+}
+
+/* Form elemanlarının genel uyumu */
+input[type="text"],
+input[type="date"],
+textarea,
+select {
+  font-size: 14px;
+  padding: 8px;
+  height: 36px;
+  box-sizing: border-box;
+}

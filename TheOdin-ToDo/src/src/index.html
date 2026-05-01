@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Todo App</title>
+</head>
+<body>
+  <h1>Todo App</h1>
+
+  <div id="project-list"></div>
+  <hr />
+
+  <div id="todo-list"></div>
+
+  <hr />
+  <h3>Yeni Görev Ekle</h3>
+  <form id="todo-form">
+    <textarea id="todo-notes" placeholder="Notlar"></textarea>
+<input type="text" id="todo-checklist" placeholder="Checklist (virgülle ayır)" />
+    <input type="text" id="todo-title" placeholder="Başlık" required />
+    <input type="text" id="todo-desc" placeholder="Açıklama" />
+    <input type="date" id="todo-date" required />
+    <select id="todo-priority">
+      <option value="low">Düşük</option>
+      <option value="medium">Orta</option>
+      <option value="high">Yüksek</option>
+    </select>
+    <button type="submit">Ekle</button>
+  </form>
+  <hr />
+<h3>Yeni Proje Ekle</h3>
+<form id="project-form">
+  <input type="text" id="project-name" placeholder="Proje Adı" required />
+  <button type="submit">Proje Ekle</button>
+</form>
+</body>
+
+</html>

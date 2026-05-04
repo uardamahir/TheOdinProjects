@@ -1,0 +1,338 @@
+@font-face {
+  font-family: "Playfair Display";
+  src: url(./assets/PlayfairDisplay-VariableFont_wght.ttf);
+}
+
+:root {
+  --d4: #880f82;
+  --d3: #ff008c;
+  --d2: #FFD6E8;
+  --d1: #FFEEF7;
+
+  --s1: #EACBB6;
+  --s2: #F1D3B1;
+  --black: #000;
+  --white: #fff;
+}
+
+body {
+  margin: 0;
+}
+
+/* HEADER */
+
+body::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  width: 100%;
+  height: 45rem;
+  background-color: var(--d4);
+  transform-origin: 0;  
+  transform: skewY(-10deg);
+  box-shadow: 0rem 0.1rem 1rem var(--d2);
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5rem;
+}
+
+.photo-container {
+  position: relative;
+}
+
+.photo-container img {
+  max-height: 30rem;
+  border-radius: 1rem;
+  box-shadow: 0rem 0.1rem 0.8rem #FFD6E8  ;
+}
+
+.image-description {
+  position: absolute;
+  font-family: "Playfair Display";
+  font-weight: 600;
+  font-size: 2.6rem;
+  bottom: -7%; left: 15%;
+  text-align: center;
+  color: white;
+}
+
+.about-me-container {
+  background-color: white;
+  padding: 1.5rem;
+  max-width: 50rem;
+  box-shadow: 0rem 0.1rem 1rem black;
+}
+
+.about-me-container h1 {
+  font-family: "Playfair Display";
+  font-weight: 500;
+  font-size: 2.5rem;
+  margin-bottom: 3.2rem;
+}
+
+.about-me-container p {
+  font-size: 1.5rem;
+  font-weight: 400;
+}
+
+.about-me-container footer {
+  display: flex;
+  justify-content: end;
+  gap: 0.8rem;
+  padding-top: 2.5rem;
+  padding-right: 1rem;
+}
+
+.about-me-container svg{
+  height: 2rem;
+}
+
+/* SVG animasyonu */
+
+svg:hover {
+  transition: all 200ms ease-in-out;
+  transform: scale(1.1);
+}
+
+svg {
+  transition: all 200ms ease-in-out;
+}
+
+/* Projeler */
+
+main {
+  padding: 5rem;
+  max-width: 100rem;
+  margin: auto;
+}
+
+main h2{
+  font-size: 4rem;
+}
+
+.my-projects {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 4rem;
+}
+
+.project-container {
+  max-width: 30rem;
+  background-color: var(--d1);
+  display: flex;
+  flex-direction: column;
+  border-radius: 0.2rem;
+}
+
+.project-container img {
+ object-fit: cover;
+ height: 20rem;
+ width: 100%;
+ border-radius: 0.2rem 0.2rem 0 0;
+}
+
+.project-info-name{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.project-info-name h1 {
+  font-family: 'Playfair Display';
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-left: 0.6rem;
+}
+
+.project-links svg {
+  height: 2rem;
+  margin-left: 0.5rem;
+}
+
+.project-info {
+  padding: 1rem;
+}
+.project-info p {
+  font-family: 'Playfair Display';
+  font-size: 1rem;
+  font-weight: 300;
+}
+
+/* FOOTER */
+
+.footer {
+  background-color: var(--d4);
+  display: flex;
+  justify-content: center;
+  gap: 4rem;
+  padding: 5rem;
+}
+
+.left {
+  max-width: 28rem;
+  flex: 0 1 28rem;
+}
+
+.footer img {
+  max-height: 40rem;
+  width: 100%;
+  border-radius: 4rem;
+}
+
+.right img {
+  width: 100%;
+  height: 100%;                   
+  object-fit: cover;              
+  display: block;
+}
+
+.footer h1 {
+  font-family: "Playfair Display";
+  font-weight: 100;
+  font-size: 4rem;
+}
+
+.links-container {
+  display: flex;
+  justify-content: start;
+  gap: 1.8rem;
+}
+
+.links-container svg {
+  height: 2.5rem;
+}
+
+.right {
+  max-width: 55rem;
+  display: flex;
+  align-items: center;
+}
+
+.email-link {
+  text-decoration: underline;
+}
+
+
+/* RESPONSIVE DESIGN */
+@media (max-width: 1024px) {
+  .my-projects {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .project-container {
+    max-width: 36rem;
+  }
+
+  .footer {
+    gap: 13rem;
+  }
+
+  .header {
+    padding: 5rem;
+  }
+}
+
+@media (max-width: 744px) {
+  .photo-container {
+    height: 40rem;
+  }
+
+  .photo-container h1 {
+    font-size: 3rem;
+  }
+
+  .my-projects {
+    grid-template-columns: 1fr;
+  }
+
+  .project-container img {
+    max-height: 30rem;
+    filter: none;
+    opacity: 1;
+  }
+
+  .project-container {
+    max-width: 60rem;
+  }
+
+  .project-links svg {
+    height: 2.25rem;
+    margin-left: 1.25rem;
+  }
+
+  .header,
+  .footer {
+    flex-direction: column;
+  }
+
+   .about-me-container {
+    background-color: transparent;
+    box-shadow: none;
+    padding: 12rem 0rem 5rem 0rem;
+  }
+
+  .about-me-container p {
+    font-size: 2rem;
+  }
+
+  .about-me-container h1 {
+    text-align: center;
+  }
+
+  .about-me-container footer {
+    justify-content: center;
+    gap: 2.5rem;
+    padding-top: 2rem;
+  }
+
+  .about-me-container svg {
+    height: 3rem;
+  }
+
+  main {
+    padding: 2rem 10rem 5rem 10rem;
+  }
+
+  main h1 {
+    text-align: center;
+  }
+
+  .footer {
+    text-align: center;
+    align-items: center;
+    gap: 3rem;
+  }
+
+  .links-container {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 600px) {
+  .header {
+    padding: 2rem;
+  }
+
+  main {
+    padding: 2rem 2rem 5rem 2rem;
+  }
+
+  .photo-container {
+    height: 35rem;
+  }
+}
+
+.project-container:hover img {
+  filter: none;
+  opacity: 1;
+  transition: all 200ms ease-in-out;
+}
+
+.project-container:hover {
+  transform: scale(1.01);
+  transition: all 200ms ease-in-out;
+}

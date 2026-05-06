@@ -1,0 +1,17 @@
+{
+  "name": "theodin-battleship-mv",
+  "version": "1.0.0",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest",
+    "build": "babel src --out-dir dist --extensions .js --copy-files",
+    "start": "node dist/index.js"
+  },
+  "jest": {
+    "testEnvironment": "node",
+    "transform": {
+      "^.+\\.[jt]sx?$": "babel-jest"
+    }
+  }
+}
